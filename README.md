@@ -1,1 +1,1 @@
-#phpRAT Connector
+phpRAT Connector
