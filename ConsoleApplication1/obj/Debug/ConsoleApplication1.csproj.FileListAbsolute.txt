@@ -7,3 +7,6 @@ G:\My Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplicati
 G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\bin\Debug\connector.exe.config
 G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\obj\Debug\connector.exe
 G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\obj\Debug\connector.pdb
+G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\bin\Debug\connector.exe
+G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\bin\Debug\connector.pdb
+G:\My Documents\Visual Studio 2015\Projects\connector\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
